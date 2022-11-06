@@ -4,6 +4,8 @@ import Todo from "./components/Todo";
 import Greeting from "./components/Greeting";
 import { ReactComponent } from "./icons/circle.svg";
 import { BootStrapIcon, DownloadIcon } from "./AppIcons";
+import CSSModule from "./components/CSSModule";
+import styles from "./components/style.module.less";
 
 // const getMyName = () => {
 //   return new Promise((resolve, reject) => {
@@ -140,17 +142,28 @@ const App = () => {
   // Dynamic list rendering - react
   return (
     <>
-      <DownloadIcon />
+      {/* <DownloadIcon />
       <BootStrapIcon />
       <ReactComponent />
       <Activity size={48} color="blue" onClick={() => alert("hello")} />
       {members.map((member) => {
         return <Greeting key={member.id} name={member.name} />;
-      })}
+      })} */}
       {/* <Greeting name="Aman" />
       <Greeting name="Sayed" />
       <Greeting name="Jyoti" />
       <Greeting name="Shivani" /> */}
+      {/* <p>Hello world!</p>
+      <p className="poppins-400">Poppins 400</p>
+      <p className="poppins-100">Poppins 100</p>
+      <p className="poppins-900">Poppins 900</p>
+
+      <h3 className="beyno">Black Panther!!</h3> */}
+
+      <CSSModule />
+      <div className={styles.container}>
+        <h2 className={styles["green-dark"]}>Jyoti</h2>
+      </div>
     </>
   );
 };
